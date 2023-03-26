@@ -1,0 +1,17 @@
+<configuration>
+<!-- hive仓库默认数据库的位置-->
+<property>
+   <name>hive.metastore.warehouse.dir</name>
+   <value>hdfs://master:9000/user/hive_remote/warehouse</value>
+</property>
+<!-- 远程元数据存储的Thrift URI，9083是默认监听端口号-->
+<property>
+   <name>hive.metastore.uris</name>
+   <value>thrift://slave1:9083</value>
+</property>
+<!--- 使用本地服务连接Hive,默认为true-->
+<property>
+   <name>hive.metastore.local</name>
+   <value>false</value>
+</property>
+</configuration>
